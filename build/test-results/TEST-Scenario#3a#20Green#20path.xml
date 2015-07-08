@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Green path" tests="5" skipped="1" failures="0" errors="0" timestamp="2015-07-07T01:07:32" hostname="atlas" time="0.996">
+  <properties/>
+  <testcase name="Given a valid order" classname="Scenario: Green path" time="0.001"/>
+  <testcase name="When the order is posted to the entry endpoint" classname="Scenario: Green path" time="0.0"/>
+  <testcase name="Then a success message is returned" classname="Scenario: Green path" time="0.0"/>
+  <testcase name="And the order is placed in the vendor interface" classname="Scenario: Green path" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="classMethod" classname="Scenario: Green path" time="3.268"/>
+  <system-out><![CDATA[Starting Camel. Use ctrl + c to terminate the JVM.
+== Spark has ignited ...
+>> Listening on 0.0.0.0:9091
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 starting
+[Test worker] INFO org.apache.camel.impl.converter.DefaultTypeConverter - Loaded 210 type converters
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is starting
+[Test worker] INFO org.apache.camel.management.ManagedManagementStrategy - JMX is enabled
+[Test worker] INFO org.apache.camel.component.jackson.JacksonDataFormat - Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@4019176b
+[Test worker] INFO org.apache.camel.component.jackson.JacksonDataFormat - Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@70bc7720
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeVendorOrder started and consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route2 started and consuming from: Endpoint[direct://noOp]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route1 started and consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeTrimbleOrder started and consuming from: Endpoint[direct://placeTrimbleOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeNovatelOrder started and consuming from: Endpoint[direct://placeNovatelOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Total 5 routes, of which 5 is started.
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) started in 1.007 seconds
+[Thread-8] INFO org.eclipse.jetty.util.log - Logging initialized @5006ms
+[Thread-8] INFO org.eclipse.jetty.server.Server - jetty-9.2.9.v20150224
+[Thread-8] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@31055c10{HTTP/1.1}{0.0.0.0:9091}
+[Thread-8] INFO org.eclipse.jetty.server.Server - Started @5168ms
+]]></system-err>
+</testsuite>

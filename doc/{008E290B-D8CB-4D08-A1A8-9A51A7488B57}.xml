@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?><OasisPO xmlns="http://OasisPurchaseOrder.OasisPO">
+  <Header xmlns="">
+    <SupplierCode>63132</SupplierCode>
+    <OrderNumber>FT83844</OrderNumber>
+    <OrderDate>20140226</OrderDate>
+    <CurrencyCode>EUR</CurrencyCode>
+    <BlanketOrderNumber>
+    </BlanketOrderNumber>
+    <AgcoOrderNumber>B267647</AgcoOrderNumber>
+    <DealerCode>2834600</DealerCode>
+    <CustomerOrderRef>260214Bothe724HP</CustomerOrderRef>
+    <OrderCategory>01</OrderCategory>
+  </Header>
+  <Line xmlns="">
+    <LineNumber>001</LineNumber>
+    <AgcoPartNumber> 3909302M1</AgcoPartNumber>
+    <SupplierPartNumber>S-HP-EU-RE-3M</SupplierPartNumber>
+    <PartDescription>SIGNAL</PartDescription>
+    <Quantity>          1</Quantity>
+    <UnitPrice>            500.00000</UnitPrice>
+    <DueDate>20140226</DueDate>
+    <CustomerLineRef>231346 DE 140303 0900</CustomerLineRef>
+  </Line>
+  <SupplierAddress xmlns="">
+    <Code>63132</Code>
+    <ContactName>GERT VAN DER VELDE</ContactName>
+    <SupplierName>OMNISTAR B.V</SupplierName>
+    <AddressLine1>69 DILLENBURGSINGEL</AddressLine1>
+    <AddressLine2>
+    </AddressLine2>
+    <AddressLine3>LEIDSCHENDAM</AddressLine3>
+    <AddressLine4>9999 ZZ</AddressLine4>
+    <AddressLine5>
+    </AddressLine5>
+    <PostCode>
+    </PostCode>
+    <CountryCode>NL</CountryCode>
+  </SupplierAddress>
+  <BuyerAddress xmlns="">
+    <Code>FT</Code>
+    <ContactName>
+    </ContactName>
+    <BuyerName>AGCO Parts</BuyerName>
+    <AddressLine1>AGCO Deutschland GmbH</AddressLine1>
+    <AddressLine2>Johann-Georg-Fendt-Str. 14</AddressLine2>
+    <AddressLine3>Marktoberdorf</AddressLine3>
+    <AddressLine4>DEUTSCHLAND</AddressLine4>
+    <AddressLine5>
+    </AddressLine5>
+    <PostCode>D-87616</PostCode>
+    <CountryCode>DE</CountryCode>
+  </BuyerAddress>
+  <InvoiceAddress xmlns="">
+    <Code>AIM</Code>
+    <ContactName>
+    </ContactName>
+    <InvoiceName>AGCO International GmbH</InvoiceName>
+    <AddressLine1>Customer Services,</AddressLine1>
+    <AddressLine2>Rue André Citröen,</AddressLine2>
+    <AddressLine3>Zac de la Fontaine des Saints</AddressLine3>
+    <AddressLine4>57365, Ennery, France</AddressLine4>
+    <AddressLine5>TVA:DE259732317</AddressLine5>
+    <PostCode>
+    </PostCode>
+    <CountryCode>GB</CountryCode>
+  </InvoiceAddress>
+  <DeliveryAddress xmlns="">
+    <Code>28346   000</Code>
+    <ContactName>
+    </ContactName>
+    <DeliveryName>AGRAVIS Technik</DeliveryName>
+    <AddressLine1>Sachsen-Anhalt/Brandenburg GmbH</AddressLine1>
+    <AddressLine2>Guenthersdorfer Str. 1</AddressLine2>
+    <AddressLine3>39387 Oschersleben</AddressLine3>
+    <AddressLine4>DEUTSCHLAND</AddressLine4>
+    <AddressLine5>39387 DEUTSCHLAND</AddressLine5>
+    <PostCode>39387</PostCode>
+    <CountryCode>DE</CountryCode>
+  </DeliveryAddress>
+</OasisPO>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RunCukesTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="atlas" time="0.0">
+  <properties/>
+  <system-out><![CDATA[Feature: Create Order
+>>> Spark shutting down...done
+>>> Spark shutting down...done
+
+  Scenario: Invalid input                          ?[90m# createOrder.feature:8?[0m
+    ?[32mGiven ?[0m?[32man invalid order?[0m                         ?[90m# add_steps.groovy:74?[0m
+    ?[32mWhen ?[0m?[32mthe order is posted to the entry endpoint?[0m ?[90m# add_steps.groovy:34?[0m
+    ?[31mThen ?[0m?[31ma validation error message is returned?[0m    ?[90m# add_steps.groovy:100?[0m
+      ?[31mjava.lang.NullPointerException: Cannot get property 'status' on null object
+      	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+      	at ✽.Then a validation error message is returned(createOrder.feature:11)
+      ?[0m
+
+2 Scenarios (?[31m1 failed?[0m, ?[33m1 undefined?[0m)
+7 Steps (?[31m1 failed?[0m, ?[33m1 undefined?[0m, ?[32m5 passed?[0m)
+0m3.655s
+
+java.lang.NullPointerException: Cannot get property 'status' on null object
+	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+	at ✽.Then a validation error message is returned(createOrder.feature:11)
+
+
+You can implement missing steps with the snippets below:
+
+Then(~/^the order is placed in the vendor interface$/) { ->
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException()
+}
+
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/cjames/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.9/f918aa891c5402deb6b4dc82862699bb82602a2e/slf4j-simple-1.7.9.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/cjames/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.0.0/2577f6b69bbab34bb55634a4500b1b877aeffb7c/logback-classic-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/cjames/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.6.1/bd245d6746cdd4e6203e976e21d597a46f115802/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[Test worker] INFO org.mortbay.log - Logging to org.slf4j.impl.SimpleLogger(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[Test worker] INFO org.mortbay.log - jetty-6.1.26
+[Test worker] INFO org.mortbay.log - Started SocketConnector@0.0.0.0:7070
+[qtp2145877383-22] INFO com.agcocorp.feature-unlock-api - Exchange[ExchangePattern: InOut, BodyType: java.util.HashMap, Body: {orderNumber=1234, skuNumber=Novatel01}]
+[qtp2145877383-22] INFO com.agcocorp.feature-unlock-api - Exchange[ExchangePattern: InOut, BodyType: java.util.HashMap, Body: {VisitorId=visitorId, CustNumb=customerNumber, orderNumber=1234, skuNumber=Novatel01, Password=password, RequestType=REQUEST_ORDER}]
+[Test worker] WARN groovyx.net.http.ParserRegistry - Cannot find parser for content-type: [application/json -- using default parser.
+[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 stopping
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutting down
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 5 routes (timeout 300 seconds)
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeNovatelOrder shutdown complete, was consuming from: Endpoint[direct://placeNovatelOrder]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeTrimbleOrder shutdown complete, was consuming from: Endpoint[direct://placeTrimbleOrder]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route2 shutdown complete, was consuming from: Endpoint[direct://noOp]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeVendorOrder shutdown complete, was consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 5 routes completed in 0 seconds
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@31055c10{HTTP/1.1}{0.0.0.0:9091}
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) uptime 2.195 seconds
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutdown in 0.069 seconds
+[qtp779151172-36] INFO com.agcocorp.feature-unlock-api - Exchange[ExchangePattern: InOut, BodyType: java.util.HashMap, Body: {foo=bar}]
+[Test worker] WARN groovyx.net.http.ParserRegistry - Cannot find parser for content-type: [application/json -- using default parser.
+[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 stopping
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutting down
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 5 routes (timeout 300 seconds)
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeNovatelOrder shutdown complete, was consuming from: Endpoint[direct://placeNovatelOrder]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeTrimbleOrder shutdown complete, was consuming from: Endpoint[direct://placeTrimbleOrder]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route2 shutdown complete, was consuming from: Endpoint[direct://noOp]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeVendorOrder shutdown complete, was consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 5 routes completed in 0 seconds
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@48698773{HTTP/1.1}{0.0.0.0:9091}
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) uptime 0.405 seconds
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutdown in 0.031 seconds
+]]></system-err>
+</testsuite>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Scenario: Invalid input</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Scenario: Invalid input</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Scenario: Invalid input</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.459s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Then a validation error message is returned"></a>
+<h3 class="failures">Then a validation error message is returned</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot get property 'status' on null object
+	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+	at ✽.Then a validation error message is returned(createOrder.feature:11)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="classMethod"></a>
+<h3 class="failures">classMethod</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot get property 'status' on null object
+	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+	at ✽.Then a validation error message is returned(createOrder.feature:11)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Given an invalid order</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Then a validation error message is returned</td>
+<td>0.007s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">When the order is posted to the entry endpoint</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">classMethod</td>
+<td>0.450s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Starting Camel. Use ctrl + c to terminate the JVM.
+== Spark has ignited ...
+&gt;&gt; Listening on 0.0.0.0:9091
+
+  Scenario: Green path                              ?[90m# createOrder.feature:2?[0m
+    ?[32mGiven ?[0m?[32ma valid order?[0m                             ?[90m# add_steps.groovy:30?[0m
+    ?[32mWhen ?[0m?[32mthe order is posted to the entry endpoint?[0m  ?[90m# add_steps.groovy:34?[0m
+    ?[32mThen ?[0m?[32ma success message is returned?[0m              ?[90m# add_steps.groovy:50?[0m
+    ?[33mAnd ?[0m?[33mthe order is placed in the vendor interface?[0m
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 starting
+[Test worker] INFO org.apache.camel.impl.converter.DefaultTypeConverter - Loaded 210 type converters
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is starting
+[Test worker] INFO org.apache.camel.management.ManagedManagementStrategy - JMX is enabled
+[Test worker] INFO org.apache.camel.impl.converter.DefaultTypeConverter - Loaded 210 type converters
+[Test worker] INFO org.apache.camel.component.jackson.JacksonDataFormat - Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@d92acbf
+[Test worker] INFO org.apache.camel.component.jackson.JacksonDataFormat - Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@4cd71436
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeVendorOrder started and consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route2 started and consuming from: Endpoint[direct://noOp]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route1 started and consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Thread-19] INFO org.eclipse.jetty.server.Server - jetty-9.2.9.v20150224
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeTrimbleOrder started and consuming from: Endpoint[direct://placeTrimbleOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeNovatelOrder started and consuming from: Endpoint[direct://placeNovatelOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Total 5 routes, of which 5 is started.
+[Thread-19] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@48698773{HTTP/1.1}{0.0.0.0:9091}
+[Thread-19] INFO org.eclipse.jetty.server.Server - Started @6481ms
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) started in 0.255 seconds
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.4</a> at Jul 6, 2015 9:07:34 PM</p>
+</div>
+</div>
+</body>
+</html>

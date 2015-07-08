@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Invalid input" tests="4" skipped="0" failures="2" errors="0" timestamp="2015-07-07T01:07:33" hostname="atlas" time="0.141">
+  <properties/>
+  <testcase name="Given an invalid order" classname="Scenario: Invalid input" time="0.002"/>
+  <testcase name="When the order is posted to the entry endpoint" classname="Scenario: Invalid input" time="0.0"/>
+  <testcase name="Then a validation error message is returned" classname="Scenario: Invalid input" time="0.007">
+    <failure message="java.lang.NullPointerException: Cannot get property 'status' on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property 'status' on null object
+	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+	at ✽.Then a validation error message is returned(createOrder.feature:11)
+</failure>
+  </testcase>
+  <testcase name="classMethod" classname="Scenario: Invalid input" time="0.45">
+    <failure message="java.lang.NullPointerException: Cannot get property 'status' on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property 'status' on null object
+	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+	at ✽.Then a validation error message is returned(createOrder.feature:11)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Starting Camel. Use ctrl + c to terminate the JVM.
+== Spark has ignited ...
+>> Listening on 0.0.0.0:9091
+
+  Scenario: Green path                              ?[90m# createOrder.feature:2?[0m
+    ?[32mGiven ?[0m?[32ma valid order?[0m                             ?[90m# add_steps.groovy:30?[0m
+    ?[32mWhen ?[0m?[32mthe order is posted to the entry endpoint?[0m  ?[90m# add_steps.groovy:34?[0m
+    ?[32mThen ?[0m?[32ma success message is returned?[0m              ?[90m# add_steps.groovy:50?[0m
+    ?[33mAnd ?[0m?[33mthe order is placed in the vendor interface?[0m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 starting
+[Test worker] INFO org.apache.camel.impl.converter.DefaultTypeConverter - Loaded 210 type converters
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is starting
+[Test worker] INFO org.apache.camel.management.ManagedManagementStrategy - JMX is enabled
+[Test worker] INFO org.apache.camel.impl.converter.DefaultTypeConverter - Loaded 210 type converters
+[Test worker] INFO org.apache.camel.component.jackson.JacksonDataFormat - Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@d92acbf
+[Test worker] INFO org.apache.camel.component.jackson.JacksonDataFormat - Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@4cd71436
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeVendorOrder started and consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route2 started and consuming from: Endpoint[direct://noOp]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route1 started and consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Thread-19] INFO org.eclipse.jetty.server.Server - jetty-9.2.9.v20150224
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeTrimbleOrder started and consuming from: Endpoint[direct://placeTrimbleOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: placeNovatelOrder started and consuming from: Endpoint[direct://placeNovatelOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Total 5 routes, of which 5 is started.
+[Thread-19] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@48698773{HTTP/1.1}{0.0.0.0:9091}
+[Thread-19] INFO org.eclipse.jetty.server.Server - Started @6481ms
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) started in 0.255 seconds
+]]></system-err>
+</testsuite>

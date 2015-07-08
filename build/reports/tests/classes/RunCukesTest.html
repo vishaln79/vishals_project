@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class RunCukesTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class RunCukesTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; RunCukesTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">0</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">-</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">-</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Feature: Create Order
+&gt;&gt;&gt; Spark shutting down...done
+&gt;&gt;&gt; Spark shutting down...done
+
+  Scenario: Invalid input                          ?[90m# createOrder.feature:8?[0m
+    ?[32mGiven ?[0m?[32man invalid order?[0m                         ?[90m# add_steps.groovy:74?[0m
+    ?[32mWhen ?[0m?[32mthe order is posted to the entry endpoint?[0m ?[90m# add_steps.groovy:34?[0m
+    ?[31mThen ?[0m?[31ma validation error message is returned?[0m    ?[90m# add_steps.groovy:100?[0m
+      ?[31mjava.lang.NullPointerException: Cannot get property 'status' on null object
+      	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+      	at ✽.Then a validation error message is returned(createOrder.feature:11)
+      ?[0m
+
+2 Scenarios (?[31m1 failed?[0m, ?[33m1 undefined?[0m)
+7 Steps (?[31m1 failed?[0m, ?[33m1 undefined?[0m, ?[32m5 passed?[0m)
+0m3.655s
+
+java.lang.NullPointerException: Cannot get property 'status' on null object
+	at add_steps$_run_closure6.doCall(add_steps.groovy:103)
+	at ✽.Then a validation error message is returned(createOrder.feature:11)
+
+
+You can implement missing steps with the snippets below:
+
+Then(~/^the order is placed in the vendor interface$/) { -&gt;
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException()
+}
+
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/cjames/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.9/f918aa891c5402deb6b4dc82862699bb82602a2e/slf4j-simple-1.7.9.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/cjames/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.0.0/2577f6b69bbab34bb55634a4500b1b877aeffb7c/logback-classic-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/cjames/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.6.1/bd245d6746cdd4e6203e976e21d597a46f115802/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[Test worker] INFO org.mortbay.log - Logging to org.slf4j.impl.SimpleLogger(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[Test worker] INFO org.mortbay.log - jetty-6.1.26
+[Test worker] INFO org.mortbay.log - Started SocketConnector@0.0.0.0:7070
+[qtp2145877383-22] INFO com.agcocorp.feature-unlock-api - Exchange[ExchangePattern: InOut, BodyType: java.util.HashMap, Body: {orderNumber=1234, skuNumber=Novatel01}]
+[qtp2145877383-22] INFO com.agcocorp.feature-unlock-api - Exchange[ExchangePattern: InOut, BodyType: java.util.HashMap, Body: {VisitorId=visitorId, CustNumb=customerNumber, orderNumber=1234, skuNumber=Novatel01, Password=password, RequestType=REQUEST_ORDER}]
+[Test worker] WARN groovyx.net.http.ParserRegistry - Cannot find parser for content-type: [application/json -- using default parser.
+[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 stopping
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutting down
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 5 routes (timeout 300 seconds)
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeNovatelOrder shutdown complete, was consuming from: Endpoint[direct://placeNovatelOrder]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeTrimbleOrder shutdown complete, was consuming from: Endpoint[direct://placeTrimbleOrder]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route2 shutdown complete, was consuming from: Endpoint[direct://noOp]
+[Camel (camel-1) thread #0 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeVendorOrder shutdown complete, was consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 5 routes completed in 0 seconds
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@31055c10{HTTP/1.1}{0.0.0.0:9091}
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) uptime 2.195 seconds
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutdown in 0.069 seconds
+[qtp779151172-36] INFO com.agcocorp.feature-unlock-api - Exchange[ExchangePattern: InOut, BodyType: java.util.HashMap, Body: {foo=bar}]
+[Test worker] WARN groovyx.net.http.ParserRegistry - Cannot find parser for content-type: [application/json -- using default parser.
+[Test worker] INFO org.apache.camel.main.MainSupport - Apache Camel 2.15.1 stopping
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutting down
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 5 routes (timeout 300 seconds)
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeNovatelOrder shutdown complete, was consuming from: Endpoint[direct://placeNovatelOrder]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeTrimbleOrder shutdown complete, was consuming from: Endpoint[direct://placeTrimbleOrder]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://post:vendorOrder?accept=application%2Fjson]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route2 shutdown complete, was consuming from: Endpoint[direct://noOp]
+[Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: placeVendorOrder shutdown complete, was consuming from: Endpoint[direct://placeVendorOrder]
+[Test worker] INFO org.apache.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 5 routes completed in 0 seconds
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@48698773{HTTP/1.1}{0.0.0.0:9091}
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) uptime 0.405 seconds
+[Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.15.1 (CamelContext: camel-1) is shutdown in 0.031 seconds
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.4</a> at Jul 6, 2015 9:07:34 PM</p>
+</div>
+</div>
+</body>
+</html>
